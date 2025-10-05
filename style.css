@@ -18,7 +18,8 @@ body {
 }
 
 .logo img {
-  width: 130px;
+  width: 200px;
+  height: auto;
 }
 
 .navbar ul {
@@ -158,121 +159,278 @@ footer {
 }
 
 /* Seccion Nueva Perrito */
-/* Sección de Cita */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #3d3428;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h2, h3 {
+    font-weight: bold;
+}
+
+/* Sección de cita */
 .quote-section {
-  margin: 40px 0 20px;
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
+    background: #fff4b3;
+    padding: 3rem 1rem;
 }
 
-.quote-container {
-  background-color: #fff18e; /* Amarillo suave */
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  max-width: 900px;
-  padding: 20px 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.quote-bear {
-  width: 250px; /* Tamaño del osito */
-  margin-right: 20px;
-  flex-shrink: 0;
+.teddy-bear {
+    width: 200px;
+    height: 200px;
+}
+
+.teddy-bear img {
+  width: 400px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  margin-top: -80px;
+  margin-bottom: -40px;
+  box-shadow: none; /* Sin sombra para que no parezca fondo */
+  background: none; /* Sin fondo */
 }
 
 .quote-text {
-  color: #ef7f1a; /* Naranja */
-  font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1.3;
-  position: relative;
-  text-align: center;
-  flex: 1;
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+    position: relative;
+    text-align: center;
+    padding: 0 2rem;
 }
 
-/* Comillas grandes naranjas */
+.quote-text p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #e67e22;
+    position: relative;
+    z-index: 10;
+}
+
 .quote-mark {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #ef7f1a;
-  user-select: none;
+    font-size: 4rem;
+    color: #e67e22;
+    opacity: 0.4;
+    font-family: serif;
+    position: absolute;
+    top: -1rem;
+    left: 0;
 }
 
-.open-quote {
-  margin-right: 5px;
+.quote-mark.end {
+    top: auto;
+    bottom: -2rem;
+    left: auto;
+    right: 0;
 }
 
-.close-quote {
-  margin-left: 5px;
+/* Galería de productos */
+.product-gallery {
+    padding: 4rem 1rem;
+    background: #ffffff;
 }
 
-/* Título Nuevos diseños */
-.new-designs h3 {
-  color: #ef7f1a;
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.6rem;
-  margin: 0 20px 25px;
-  font-family: 'Poppins', sans-serif;
+.product-gallery h2 {
+    font-size: 2.5rem;
+    color: #e67e22;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.gallery {
-  max-width: 1000px;
-  margin: 0 auto 60px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 20px;
-  padding: 0 20px;
-  align-items: center;
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
-.gallery img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  object-fit: cover;
-  display: block;
+.product-large {
+    width: 100%;
 }
 
-/* Imagen grande a la izquierda (primera columna, fila 1 y 2) */
-.gallery img:nth-child(1) {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
+.products-small {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
 }
 
-/* Imagen grande a la derecha (tercera columna, fila 1 y 2) */
-.gallery img:nth-child(6) {
-  grid-column: 3 / 4;
-  grid-row: 1 / 3;
+.product-card {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-/* Imagen larga superior central (segunda columna, fila 1) */
-.gallery img:nth-child(2) {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  object-fit: contain; /* Si quieres que no se recorte */
+.product-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* Dos imágenes pequeñas debajo, en central (segunda columna, fila 2),
-   ocupando cada una media columna (mitad arriba y abajo)
-   Para lograr esto, envolvemos estas imágenes en un contenedor o hacemos que una de estas imágenes ocupe dos filas */
-.gallery img:nth-child(3),
-.gallery img:nth-child(4) {
-  width: 48%;
+.product-card img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Nos aseguramos de que las dos imágenes pequeñas estén juntas y centradas */
-.gallery .small-images {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  display: flex;
-  justify-content: space-between;
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Sección CTA */
+.cta-section {
+    background: #e67e22;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background: #fff4b3;
+    color: #3d3428;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: #fff4b3;
+    padding: 3rem 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    font-size: 1.25rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+.newsletter-form button {
+    background: #3d3428;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    width: 48px;
+    height: 48px;
+    border: 2px solid #3d3428;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #3d3428;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #e67e22;
+    border-color: #e67e22;
+    color: white;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .quote-content {
+        flex-direction: row;
+    }
+    
+    .teddy-bear {
+        width: 256px;
+        height: 256px;
+    }
+    
+    .quote-text {
+        text-align: left;
+    }
+    
+    .quote-text p {
+        font-size: 2rem;
+        padding-left: 3rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .products-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .product-gallery h2 {
+        font-size: 3rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 3rem;
+    }
 }

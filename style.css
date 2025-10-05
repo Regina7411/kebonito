@@ -1,0 +1,158 @@
+/* Fuente general */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  width: 130px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  border-radius: 20px;
+  padding: 6px 12px;
+  transition: 0.3s;
+}
+
+/* Colores de botones del menú */
+.inicio { background-color: #b3dcff; }
+.catalogo { background-color: #ffe87c; }
+.nosotros { background-color: #d38a61; color: #fff; }
+.contacto { background-color: #f58f64; color: #fff; }
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+.icons a {
+  font-size: 1.3rem;
+  margin-left: 15px;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: right;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.hero-text .ke {
+  color: #5da9ff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-text .bonito {
+  color: #ffb02e;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero-text p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn-ver, .btn-shop {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.btn-ver {
+  background-color: #ffed7a;
+  color: #333;
+}
+
+.btn-shop {
+  background-color: #b3dcff;
+  color: #333;
+}
+
+/* Nuevos modelos */
+.modelos {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.modelos h2 {
+  font-size: 2rem;
+  background-color: #d38a61;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 20px;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.galeria img {
+  width: 180px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 40px 20px;
+  background-color: #fff;
+}

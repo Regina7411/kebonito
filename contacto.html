@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Ke Bonito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 2rem auto 0;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ddd;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      align-self: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="img/logo.png" alt="Ke Bonito">
+    </div>
+    <nav>
+      <ul>
+        <li><a class="inicio" href="index.html">Inicio</a></li>
+        <li><a class="catalogo" href="catalogo.html">Catálogo</a></li>
+        <li><a class="nosotros" href="nosotros.html">Nosotros</a></li>
+        <li><a class="contacto" href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <a href="#" class="icon-link">
+        <img src="img/Heart Streamline Sharp Remix.png" alt="Favoritos" width="28" height="28">
+      </a>
+      <a href="#" class="icon-link">
+        <img src="img/Shopping Cart Subtract Streamline Core Remix.png" alt="Carrito" width="28" height="28">
+      </a>
+      <a href="#" class="icon-link">
+        <img src="img/Alert Help Question Streamline Core Remix.png" alt="Ayuda" width="28" height="28">
+      </a>
+    </div>
+  </header>
+
+  <!-- Contacto Section -->
+  <section class="cta-section">
+      <div class="container">
+          <h2>Contáctanos</h2>
+          <p>¿Tienes alguna pregunta? Envíanos un mensaje.</p>
+          <form class="contact-form" action="#" method="POST">
+              <input type="text" name="name" placeholder="Tu Nombre" required>
+              <input type="email" name="email" placeholder="Tu Email" required>
+              <textarea name="message" placeholder="Tu Mensaje" rows="5" required></textarea>
+              <button type="submit" class="cta-button">Enviar Mensaje</button>
+          </form>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Déjanos enviarte notificaciones de nuevos modelos!</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email">
+                    <button>Suscríbete ahora</button>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Esperamos tu visita!</h3>
+                <p>Direccion</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Síguenos en nuestras redes sociales:</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">
+                        <img src="img/Vector.png" alt="Instagram" width="32" height="32">
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <img src="img/Vector (1).png" alt="Facebook" width="32" height="32">
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <img src="img/tiktok.png" alt="TikTok" width="32" height="32">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

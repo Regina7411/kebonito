@@ -156,3 +156,123 @@ footer {
   padding: 40px 20px;
   background-color: #fff;
 }
+
+/* Seccion Nueva Perrito */
+/* Sección de Cita */
+.quote-section {
+  margin: 40px 0 20px;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.quote-container {
+  background-color: #fff18e; /* Amarillo suave */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.quote-bear {
+  width: 250px; /* Tamaño del osito */
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.quote-text {
+  color: #ef7f1a; /* Naranja */
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  position: relative;
+  text-align: center;
+  flex: 1;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Comillas grandes naranjas */
+.quote-mark {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ef7f1a;
+  user-select: none;
+}
+
+.open-quote {
+  margin-right: 5px;
+}
+
+.close-quote {
+  margin-left: 5px;
+}
+
+/* Título Nuevos diseños */
+.new-designs h3 {
+  color: #ef7f1a;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0 20px 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.gallery {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  object-fit: cover;
+  display: block;
+}
+
+/* Imagen grande a la izquierda (primera columna, fila 1 y 2) */
+.gallery img:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+/* Imagen grande a la derecha (tercera columna, fila 1 y 2) */
+.gallery img:nth-child(6) {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+
+/* Imagen larga superior central (segunda columna, fila 1) */
+.gallery img:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  object-fit: contain; /* Si quieres que no se recorte */
+}
+
+/* Dos imágenes pequeñas debajo, en central (segunda columna, fila 2),
+   ocupando cada una media columna (mitad arriba y abajo)
+   Para lograr esto, envolvemos estas imágenes en un contenedor o hacemos que una de estas imágenes ocupe dos filas */
+.gallery img:nth-child(3),
+.gallery img:nth-child(4) {
+  width: 48%;
+}
+
+/* Nos aseguramos de que las dos imágenes pequeñas estén juntas y centradas */
+.gallery .small-images {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+}

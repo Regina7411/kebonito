@@ -606,6 +606,9 @@ h2, h3 {
   width: 220px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+  height: 100%;
 }
 
 .category-card img {
@@ -671,7 +674,6 @@ h2, h3 {
 
 .about-content {
   display: flex;
-  align-items: center;
   justify-content: space-around;
   max-width: 1000px;
   margin: 0 auto;
@@ -709,4 +711,27 @@ h2, h3 {
 .about-text p {
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* Enlaces de tarjetas de categoría */
+.category-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.category-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.category-card-link:hover .category-card {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: translateY(-4px) scale(1.03);
 }

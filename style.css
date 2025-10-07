@@ -647,3 +647,66 @@ h2, h3 {
   border-radius: 12px;
   background: none; */
 }
+
+/* About Us Page */
+.about-us-container {
+  padding: 4rem 0;
+}
+
+.about-section {
+  padding: 4rem 2rem;
+}
+
+.about-section-brown {
+  background-color: #d38a61;
+}
+
+.about-section-yellow {
+  background-color: #ffe87c;
+}
+
+.about-section-blue {
+  background-color: #b3dcff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.about-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 400px;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}

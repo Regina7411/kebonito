@@ -606,9 +606,6 @@ h2, h3 {
   width: 220px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: box-shadow 0.2s, transform 0.2s;
-  cursor: pointer;
-  height: 100%;
 }
 
 .category-card img {
@@ -634,104 +631,333 @@ h2, h3 {
   padding: 24px;
 }
 
-/* Elimina o comenta estas reglas */
 .category-img-bg {
-  /* background: #f3f3f3;
+  background: #f3f3f3;
   border-radius: 20px;
   padding: 16px;
   display: flex;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 }
 .category-img-bg img {
-  /* max-width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
-  background: none; */
+  background: none;
+}
+/* Nosotros */
+/* Fuente y estilo general */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
 }
 
-/* About Us Page */
-.about-us-container {
-  padding: 4rem 0;
+/* Sección principal */
+.about {
+    text-align: center;
+    padding: 40px 20px;
 }
 
-.about-section {
-  padding: 4rem 2rem;
+.intro {
+    color: #c2702b;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
-.about-section-brown {
-  background-color: #d38a61;
+.title {
+    color: #7a4a1a;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
 }
 
-.about-section-yellow {
-  background-color: #ffe87c;
+/* Bloque ¿Quiénes somos? */
+.who {
+    background-color: #d87b2e;
+    color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 0 auto 60px auto;
+    max-width: 900px;
 }
 
-.about-section-blue {
-  background-color: #b3dcff;
+.who h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
-.about-content {
+.who p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Sección misión y visión */
+.mission-vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission, .vision {
+    flex: 1 1 400px;
+    text-align: left;
+    position: relative;
+}
+
+.mission h3, .vision h3 {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.mission p, .vision p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Simulación de imágenes */
+.img-placeholder {
+    background-color: #555;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .who {
+        padding: 25px 20px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+}
+/* === SECCIÓN NUESTRO PROCESO === */
+.process {
+  text-align: center;
+  padding: 70px 20px;
+  background-color: #fff;
+}
+
+.section-title {
+  color: #c2702b;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.process-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
   max-width: 1000px;
   margin: 0 auto;
-  gap: 2rem;
 }
 
-.about-content.reverse {
-  flex-direction: row-reverse;
-}
-
-.about-image {
-  flex: 1;
-  max-width: 400px;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 1rem;
-}
-
-.about-text {
-  flex: 1;
-  max-width: 400px;
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
+.process-item {
+  flex: 1 1 250px;
   text-align: center;
 }
 
-.about-text h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.process-item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
-.about-text p {
+.process-item h3 {
+  color: #8ab4d6;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.process-item p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* === SECCIÓN POR QUÉ ESCOGERNOS === */
+.choose-us {
+  background-color: #d87b2e;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.choose-us h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.choose-us p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
   font-size: 1rem;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  .process-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .process-item {
+    max-width: 80%;
+  }
+}
+
+/*Contacto*/
+/* --- ENCABEZADO DE CONTACTO --- */
+.contact-header {
+  text-align: center;
+  padding: 60px 20px 40px 20px;
+}
+
+.contact-header .intro {
+  color: #d87333;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-header h1 {
+  color: #5a3b2d;
+  font-size: 2.8em;
+  margin: 10px 0;
+}
+
+.contact-header .desc {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #444;
+  font-size: 0.95em;
+}
+
+/* --- SECCIÓN DE CONTACTO PRINCIPAL --- */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: #f1b57a;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.info {
+  width: 45%;
+  color: #3a3a3a;
+}
+
+.info h2 {
+  color: #000;
+}
+
+.info p {
+  font-size: 0.95em;
   line-height: 1.6;
 }
 
-/* Enlaces de tarjetas de categoría */
-.category-card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 15px;
 }
 
-.category-card {
-  background-color: #fff;
+.contact-item i {
+  font-size: 20px;
+  color: #d87333;
+}
+
+.socials {
+  margin-top: 25px;
+}
+
+.socials a {
+  color: #d87333;
+  font-size: 22px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #3a3a3a;
+}
+
+.form-box {
+  background: #fff;
+  padding: 30px;
   border-radius: 20px;
-  padding: 20px;
-  width: 220px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: box-shadow 0.2s, transform 0.2s;
-  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 40%;
 }
 
-.category-card-link:hover .category-card {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  transform: translateY(-4px) scale(1.03);
+.form-box h3 {
+  color: #d87333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+button {
+  background-color: #d87333;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #b95f24;
+}
+
+.privacy {
+  font-size: 0.8em;
+  color: #f8f5f5;
+}
+
+.map-section {
+  background-color: #fafbfc;
+  padding: 20px 0;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
 }

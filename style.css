@@ -595,10 +595,9 @@ h2, h3 {
 
 /* Categories Section */
 .categories-section {
-  background-color: #ffe87c;
-  border-radius: 50px;
-  padding: 80px 40px 40px;
-  margin: -60px 20px 0;
+  background-color: #fce86b;
+  border-radius: 40px;
+  padding: 60px 5% 40px;
   position: relative;
   /*z-index: -2;*/
   text-align: center;
@@ -610,38 +609,95 @@ h2, h3 {
 }
 
 .discover-new {
-  font-weight: 600;
-  color: #333;
-  font-size: 1.2rem;
+   font-weight: 600;
+  color: #c98236; /* Color marrón suave */
+  font-size: 1rem;
+  letter-spacing: 2px;
 }
 
 .categories-section h2 {
-  font-size: 3rem;
-  color: #333;
-  margin-top: 0;
+  font-size: 3.5rem; /* Más grande */
+  color: #7b4a2b; /* Color marrón oscuro */
+  margin-top: 5px;
   margin-bottom: 40px;
 }
 
 .categories-grid {
-  display: flex;
+   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px; /* Espacio más pequeño entre tarjetas */
   flex-wrap: wrap;
 }
 
 .category-card {
-  background-color: #fff;
+ width: 250px; /* Un poco más ancho */
   border-radius: 20px;
-  padding: 20px;
-  width: 220px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Importante para los bordes redondeados */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Sombra sutil para el efecto de "flotación" */
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+
+.category-info {
+    padding: 20px 15px 30px; /* Más padding abajo para ese efecto de color */
+    
+    /* Por defecto, un color que no debería verse */
+    background-color: #f7f7f7; 
+}
+.category-info--bebe {
+    background-color: #fce86b; /* Amarillo suave para Bebé */
+}
+.category-info--ninas {
+    background-color: #fce86b; /* Rosa suave para Niñas */
+}
+
+.category-info--ninos {
+    background-color: #fce86b; /* Naranja/Amarillo suave para Niños */
+}
+
+.category-info--accesorios {
+    background-color: #fce86b /* Similar al Bebé para Accesorios */
+}
+
+/* Estilos de Texto Base */
+.category-info h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  /* Color de texto por defecto (p.ej., para Bebé y Accesorios) */
+  color: #8b6c4b; 
+}
+
+.category-info p {
+  font-size: 0.85rem;
+  color: #e49c4f; /* Un gris oscuro para las descripciones */
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Colores de Título Específicos para Niñas y Niños */
+
+/* Título de Niñas (Rosa oscuro) */
+.category-info--ninas h3 {
+    color: #cb779c; 
+}
+
+/* Título de Niños (Marrón/Naranja) */
+.category-info--ninos h3 {
+    color: #69a1dd; 
+}
+
+.category-info--accesorios h3 {
+    color: #f5af19; 
+}
+
 
 .category-card img {
   width: 100%;
   border-radius: 15px;
-  margin-bottom: 15px;
+  display: block;
 }
 
 .category-card h3 {
@@ -676,6 +732,206 @@ h2, h3 {
   border-radius: 12px;
   background: none;
 }
+/* --- CATÁLOGO DE PRODUCTOS (FONDO MARRÓN) --- */
+
+.catalogo-productos-grid2 {
+    /* Fondo marrón suave que rodea toda la sección */
+    background-color: #b08a6e; 
+    padding: 30px 5%;
+    max-width: 1200px;
+    margin: 30px auto;
+    
+    /* Disposición Grid de 4 columnas */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Filas iguales para una alineación perfecta de los bloques de texto */
+    grid-template-rows: 1fr 1fr; 
+    gap: 20px;
+    
+}
+
+/* 1. Estilo Base para los Artículos (Contenedores) */
+.item-producto {
+    border-radius: 5px;
+    overflow: hidden; 
+    height: 100%; 
+}
+
+/* --- DISPOSICIÓN EN EL GRID (Se mantiene igual, la posición es correcta) --- */
+.item-producto--imagen-larga { grid-column: 1 / 2; grid-row: 1 / 3; }
+.item-producto--texto-corto { grid-column: 2 / 3; grid-row: 1 / 2; background-color: #fff; }
+.item-producto--imagen-completa { grid-column: 3 / 4; grid-row: 1 / 3; }
+.item-producto--texto-completo { grid-column: 4 / 5; grid-row: 2 / 3; background-color: #fff; }
+
+
+/* --- ESTILOS DE IMAGEN Y TEXTO (AJUSTE DE COLOR Y PADDING) --- */
+
+/* Contenedor de la Imagen (FONDO BLANCO PURO) */
+.producto-imagen-contenedor {
+    /* CLAVE: Fondo blanco puro para que parezca una tarjeta de estudio */
+    background-color: #fff; 
+    
+    /* Padding generoso alrededor de la imagen */
+    padding: 30px; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.producto-imagen-contenedor img {
+    /* Asegura que la imagen tenga un margen blanco visible dentro del contenedor */
+    width: 90%; 
+    height: 90%;
+    
+    /* Mantiene las proporciones */
+    object-fit: contain; 
+}
+
+
+/* Contenedor de Información (Bloques Blancos de Texto) */
+.producto-info {
+    /* El fondo blanco lo heredan de las clases modificadoras, pero lo definimos aquí por si acaso */
+    background-color: #fff; 
+    
+    /* Padding interno generoso para el texto, idéntico al del contenedor de imagen */
+    padding: 30px; 
+    
+    height: 100%;
+    
+    /* Flexbox para centrar el texto verticalmente dentro de su celda */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+/* Estilos de Texto */
+.producto-titulo {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.producto-descripcion {
+    font-size: 0.95rem;
+    color: #666; 
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* --- MEDIA QUERY: Móviles (Se mantiene igual, apila) --- */
+@media (max-width: 768px) {
+    .catalogo-productos-grid2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .item-producto--imagen-larga,
+    .item-producto--texto-corto,
+    .item-producto--imagen-completa,
+    .item-producto--texto-completo {
+        grid-column: span 1; 
+        grid-row: span 1; 
+    }
+}
+
+/*Grod 3 Catalogo*/
+
+/* --- Estilos Base y Contenedor Principal --- */
+.contenedor-secciones {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Estilos de Cada Sección de Producto */
+.seccion-producto {
+    /* CLAVE: Usamos Flexbox para la estructura de dos columnas */
+    display: flex;
+    flex-direction: row; /* Orden por defecto: Imagen | Texto */
+    height: 300px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- CLAVE: Inversión de Columna para la SECCIÓN AZUL --- */
+.seccion-producto.inversa {
+    /* Invierte el orden: Texto | Imagen */
+    flex-direction: row-reverse;
+}
+
+/* --- Colores de Fondo de las Secciones --- */
+.seccion-amarilla {
+    background-color: #fce883;
+}
+
+.seccion-azul {
+    background-color: #add8e6;
+}
+
+/* --- Estilos Comunes para Bloques (50/50 de ancho) --- */
+.bloque-contenido {
+    flex: 1; /* Hace que cada bloque ocupe el 50% del ancho */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Estilos del Bloque de Texto --- */
+.bloque-contenido.texto {
+    color: #000000; /* Texto negro por defecto (para sección amarilla) */
+}
+.bloque-contenido.texto.texto-blanco {
+    color: #ffffff; /* Texto blanco (para sección azul) */
+}
+.bloque-contenido.texto h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.bloque-contenido.texto p {
+    font-size: 1em;
+    max-width: 80%;
+}
+
+/* --- Estilos del Bloque de Imagen --- */
+.bloque-contenido.imagen {
+    background-color: #ffffff; /* Fondo blanco */
+}
+.bloque-contenido.imagen img {
+    max-width: 90%;
+    max-height: 90%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Media Query para Móviles --- */
+@media (max-width: 768px) {
+    .seccion-producto,
+    .seccion-producto.inversa {
+        /* Ambos se apilan verticalmente en móvil, sin inversión */
+        flex-direction: column; 
+        height: auto;
+    }
+    
+    /* El orden en móvil será: Imagen (arriba) y luego Texto (abajo) */
+    .seccion-producto .bloque-contenido.imagen {
+        order: -1; 
+        height: 250px;
+    }
+    .seccion-producto .bloque-contenido.texto {
+        order: 0; 
+    }
+}
+
+
 /* Nosotros */
 /* Fuente y estilo general */
 body {
@@ -750,6 +1006,9 @@ body {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+.mission-image {
+    width: 100%;  /* Ocupa todo el ancho del contenedor */
+    height: 100%;}
 
 /* Simulación de imágenes */
 .img-placeholder {
@@ -1050,7 +1309,7 @@ header.hero {
   object-fit: cover;
 }
 
-.hero-center {
+.hero-center-bebes {
   background-color: #ffef9f;
   display: flex;
   flex-direction: column;
@@ -1114,6 +1373,7 @@ section.top {
 .product {
   width: 250px;
   text-align: left;
+  
 }
 
 .product img {
@@ -1136,20 +1396,45 @@ section.top {
 }
 
 .highlight-section {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+ gap: 20px; /* Espacio entre las tarjetas */
+  padding: 40px 5%; /* Padding para separarlo de los bordes del body */
+  max-width: 1400px; /* Ancho máximo para el catálogo */
+  margin: 0 auto 3rem auto;
 }
 
 .highlight {
-  width: 280px;
-  padding: 1rem;
-  text-align: left;
+  padding: 3rem 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
 }
 
-.highlight img {
+.product-large {
+  width: 300px;
+}
+
+.product-large img {
   width: 100%;
+  border-radius: 5px;
+}
+product-large h3 {
+  margin-top: 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 460px; /* Control the overall width of the grid */
+}
+
+.grid .product {
+  width: 220px;
+  background-color: #fff; /* Ensure products have a white background */
+  padding: 5px;
   border-radius: 5px;
 }
 
@@ -1185,33 +1470,45 @@ body {
 /* --- HERO --- */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 4fr 6fr; /* O 40% 60% */
   height: 80vh;
 }
 
 .hero-center-ninas {
   background-color: #f9d8e3;
+  
+  /* 1. LAYOUT: Define el eje Flexbox como columna (vertical) */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  
+  /* 2. CENTRADO VERTICAL: Centra el grupo de elementos arriba/abajo */
+  justify-content: center; 
+  
+  /* 3. CENTRADO HORIZONTAL (ITEM): Centra cada elemento de bloque (p, h1, a) izquierda/derecha */
+  align-items: center;   
+  
+  /* 4. CENTRADO DE TEXTO INTERNO: Asegura que el texto dentro de los elementos se centre */
+  text-align: center; 
 }
 
-.hero-center .new {
-  color: #9b6c7a;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
+.hero-center-ninas .new {
+  color: #cb779c; /* Rosa oscuro para "NEW COLLECTION" */
+  font-size: 0.8rem; /* Un poco más pequeño */
+  letter-spacing: 3px; /* Más espaciado entre letras */
+  margin-bottom: 5px; /* Pequeño espacio debajo */
 }
 
-.hero-center h1 {
-  font-size: 3rem;
-  color: #5a3a44;
-  margin: 0.5rem 0;
+.hero-center-ninas h1 {
+  font-size: 4.5rem; /* ¡Mucho más grande para el impacto! */
+  color: #cb779c; /* Rosa oscuro para el título */
+  font-weight: 700; /* Asegura que sea en negrita */
+  margin: 5px 0;
 }
 
-.hero-center .year {
-  color: #7c5a63;
+.hero-center-ninas .year {
+  color: #cb779c; /* Usa el mismo rosa oscuro para la coherencia */
+  font-size: 1.2rem; /* Un poco más grande que el original */
+  margin-bottom: 30px; /* Espacio antes del botón */
 }
 
 .btn {
@@ -1234,6 +1531,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 /* --- SECCIONES --- */
@@ -1913,3 +2211,5 @@ body {
         font-size: 2.5rem;
     }
 }
+
+/*BEBES SECCION AMARILLA*/

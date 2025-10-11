@@ -2394,3 +2394,1281 @@ body {
         font-size: 2em;
     }
 }
+
+
+/*Ninas Primera Fila Rosa*/
+body {
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bebe-store-section-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fce4ec; /* Color de fondo rosa muy suave */
+}
+
+.bebe-store-section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4b3e3e; 
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffb3c1; 
+    display: inline-block;
+    width: 100%;
+}
+
+.bebe-store-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 280px); 
+    gap: 20px;
+    overflow-x: auto; 
+    padding-bottom: 15px; 
+    justify-content: start;
+}
+
+.bebe-store-product-card {
+    /* ¡CAMBIO CLAVE! Eliminamos el background-color: #fff; */
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    padding-bottom: 20px;
+    /* La sombra se mantiene para dar el efecto de "tarjeta" sutil */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    position: relative; 
+    transition: transform 0.3s;
+    /* Hacemos que el padding superior sea 0, ya que el texto empieza justo después de la imagen */
+    padding-top: 0; 
+}
+
+.bebe-store-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.bebe-store-product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    background-color: #f7dee4; 
+}
+
+.bebe-store-product-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 15px 15px 5px 15px;
+    color: #4b3e3e; 
+}
+
+.bebe-store-product-description {
+    font-size: 0.9em;
+    color: #777; 
+    margin: 0 15px 15px 15px;
+    line-height: 1.4;
+    min-height: 60px;
+}
+
+.bebe-store-product-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff6699; 
+    position: absolute;
+    bottom: 15px; 
+    right: 15px;
+}
+
+/*TOP DEL MES 1 NINAS*/
+/* ... (CSS de la sección bebe-store-section-container anterior) ... */
+
+/* Nueva Sección: Top de este mes */
+.top-mes-section-container {
+    max-width: 1200px; /* Igual que la anterior para consistencia */
+    margin: 60px auto; /* Más margen para separar de la sección anterior */
+    padding: 20px;
+    background-color: #fce4ec;/* Mismo color de fondo */
+    text-align: center; /* Para centrar el título y los productos */
+}
+
+.top-mes-section-title {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2.5em;
+    color: #4b3e3e; /* Mismo color que el título anterior */
+    margin-bottom: 30px;
+    /* En esta sección, el título no tiene línea debajo */
+}
+
+.top-mes-products-wrapper {
+    display: flex; /* Usamos flexbox para alinear las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: flex-start; /* Alinea los items al inicio del contenedor (arriba) */
+    gap: 30px; /* Espacio entre las imágenes */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.top-mes-product-item {
+    border-radius: 8px; /* Bordes ligeramente redondeados, si se quiere */
+    overflow: hidden; /* Asegura que la imagen se ajuste al borde redondeado */
+    padding: 20px; /* Espacio interno dentro del recuadro gris */
+    display: flex; /* Para centrar la imagen dentro de este item */
+    justify-content: center;
+    align-items: center;
+    /* Las imágenes en la referencia son más grandes */
+    width: 300px; /* Ancho fijo para cada imagen */
+    height: 300px; /* Altura fija */
+    
+}
+
+.top-mes-product-item img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    max-height: 100%; /* Asegura que la imagen no se desborde */
+    object-fit: contain; /* Asegura que la imagen se vea completa dentro del contenedor, manteniendo su relación de aspecto */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+/* Media Queries para responsividad (opcional, si quieres que se reorganicen en pantallas pequeñas) */
+@media (max-width: 992px) {
+    .top-mes-products-wrapper {
+        gap: 20px;
+    }
+    .top-mes-product-item {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-mes-products-wrapper {
+        gap: 15px;
+    }
+    .top-mes-product-item {
+        width: 250px;
+        height: 250px;
+    }
+    .top-mes-section-title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-mes-products-wrapper {
+        flex-direction: column; /* Apila las imágenes verticalmente en móviles */
+        gap: 20px;
+    }
+    .top-mes-product-item {
+        width: 90%; /* Ocupa casi todo el ancho disponible */
+        height: 280px; /* Altura un poco más grande para móviles */
+        padding: 15px;
+    }
+}
+
+/*NINAS SECCION TOP DEL MES DESCRIPCION*/
+/* Nueva Sección: Solo Texto (Sin Imágenes) */
+.info-solo-section-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fdfdfd; /* Mismo fondo rosa */
+    text-align: center;
+}
+
+.info-solo-section-title {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2.5em;
+    color: #4b3e3e; 
+    margin-bottom: 30px;
+}
+
+.info-solo-wrapper {
+    display: flex; 
+    justify-content: center; 
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+/* Contenedor de cada producto de texto */
+.info-solo-item {
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 4px; /* Bordes menos redondeados */
+   
+    text-align: left;
+    width: 300px; /* Ancho fijo para cada columna */
+    margin-bottom: 20px;
+}
+
+/* Contenedor de texto y precio */
+.info-solo-details {
+    padding: 25px 20px; /* Más padding arriba para ocupar el espacio de la imagen */
+    position: relative;
+    padding-bottom: 50px; /* Espacio extra para el precio en la parte inferior */
+}
+
+/* Título */
+.info-solo-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd; /* Línea gris delgada (1px) */
+    display: inline-block; 
+}
+
+/* Descripción */
+.info-solo-description {
+    font-family: Arial, sans-serif; /* Usamos Arial para la descripción para que sea más legible si la fuente Varela es muy redondeada */
+    font-size: 0.85em;
+    color: #555;
+    margin: 10px 0 0 0;
+    line-height: 1.3;
+}
+
+/* Precio */
+.info-solo-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    position: absolute;
+    bottom: 20px; /* Posicionamiento al final de la tarjeta */
+    right: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .info-solo-item {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-solo-wrapper {
+        gap: 20px;
+    }
+    .info-solo-item {
+        width: 90%; 
+        max-width: 350px;
+    }
+}
+
+
+/*SECCION PRINCIPAL NINAS*/
+/* Sección de Banner Principal (Hero) */
+.banner-hero-container {
+    display: flex; /* Usa Flexbox para dividir en dos columnas */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 60px auto;
+    min-height: 500px;
+}
+
+/* Columna Izquierda: Contenido de Texto */
+.banner-hero-content {
+    flex: 1; /* Ocupa 50% del ancho */
+    background-color: #fbdce9; /* Color de fondo rosa pastel */
+    color: #fff; /* Color base, heredado por "NIÑAS" */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    padding: 20px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Texto Pequeño Superior (NEW COLLECTION) */
+.banner-hero-subheading {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    color: #8c5243; /* Color café para "NEW COLLECTION" */
+}
+
+/* Texto Principal (NIÑAS) */
+.banner-hero-heading {
+    font-size: 5em; 
+    margin: 0;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff; /* Blanco */
+}
+
+/* Texto del Año (2025) */
+.banner-hero-year {
+    font-size: 1.5em;
+    margin: 10px 0 30px 0;
+    color: #8c5243; /* Color café para "2025" */
+}
+
+/* Botón (SHOP NOW) */
+.banner-hero-button {
+    text-decoration: none;
+    background-color: #fff; /* Fondo blanco */
+    color: #8c5243; /* Texto color café */
+    border: 1px solid #8c5243;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.banner-hero-button:hover {
+    background-color: #8c5243;
+    color: #fff;
+}
+
+/* Columna Derecha: Imagen */
+.banner-hero-image-wrapper {
+    flex: 1; /* Ocupa 50% del ancho */
+    background-color: #f8f8f8; /* Fondo blanco/gris muy claro */
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.banner-hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+}
+
+/* Media Query para Responsividad */
+@media (max-width: 768px) {
+    .banner-hero-container {
+        flex-direction: column; /* Apila las columnas verticalmente */
+    }
+    .banner-hero-content {
+        min-height: 300px;
+    }
+    .banner-hero-heading {
+        font-size: 4em;
+    }
+}
+
+
+/*SECCION AMARILLA BEBES*/
+/* ======================================================= */
+/* SECCIÓN: YELLOW PROMO AJUSTADA PARA ALINEACIÓN */
+/* ======================================================= */
+.yellow-promo-section-container {
+    background-color: #ffffe0; /* Fondo amarillo pálido */
+    padding: 60px 20px;
+    margin: 60px auto 0 auto;
+    text-align: center;
+}
+
+.yellow-promo-item {
+    display: flex; /* Flexbox para colocar los elementos uno al lado del otro */
+    justify-content: center;
+    /* CLAVE: Esto asegura que las columnas se estiren a la misma altura */
+    align-items: stretch;
+    max-width: 1000px;
+    /* CLAVE: Una altura mínima para que los bloques no se vean comprimidos */
+    min-height: 450px; 
+    margin: 0 auto 40px auto;
+    gap: 40px; /* Espacio entre las tarjetas */
+}
+
+/* Columna de la Imagen */
+.yellow-promo-image-wrapper {
+    flex: 1; /* Ocupa la mitad del espacio */
+    
+    
+    /* CLAVE: Centra la imagen dentro de este contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yellow-promo-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%; /* La imagen no se saldrá de su contenedor */
+    object-fit: contain;
+    display: block;
+}
+
+/* Columna del Texto */
+.yellow-promo-info-wrapper {
+    flex: 1; /* Ocupa la otra mitad del espacio */
+    background-color: #fff;
+   
+    /* CLAVE: Centra el texto verticalmente dentro de la columna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* CLAVE: Padding para separar el texto del borde, haciendo que ocupe todo el espacio */
+    padding: 20px 30px; 
+}
+
+.yellow-promo-title {
+    font-size: 2.5em;
+    color: #4b3e3e;
+    margin: 0 0 10px 0;
+}
+
+.yellow-promo-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    max-width: 80%;
+}
+
+/* Media Queries para la responsividad */
+@media (max-width: 768px) {
+    .yellow-promo-item {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        min-height: auto; /* Desactiva la altura mínima en móvil */
+        gap: 20px;
+    }
+    .yellow-promo-item--image-right {
+        flex-direction: column-reverse;
+    }
+}
+
+
+/*NINOS*/
+/* ======================================================= */
+/* SECCIÓN: HALLOWEEN BANNER (CORREGIDO) */
+/* ======================================================= */
+.halloween-banner-container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 60px auto; 
+    min-height: 500px;
+}
+
+/* Columna Izquierda: Contenido de Texto */
+.halloween-banner-content {
+    flex: 1;
+    background-color: #f7a95e; /* Color naranja cálido */
+    /* ELIMINAMOS el color base blanco para que ACCESORIOS sea café */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Texto Pequeño Superior (NEW COLLECTION) */
+.halloween-banner-subheading {
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+    /* TONO BLANCO/CREMA para el texto pequeño */
+    color: #5e420a; 
+}
+
+/* Texto Principal (ACCESORIOS) */
+.halloween-banner-heading {
+    font-size: 5em; 
+    margin: 0;
+    font-weight: bold;
+    line-height: 1;
+    /* TONO CAFÉ/NARANJA OSCURO para que contraste con el fondo */
+    color: #f8f6f5; 
+}
+
+/* Texto del Año (2025) */
+.halloween-banner-year {
+    font-size: 1.5em;
+    margin: 10px 0 30px 0;
+    /* TONO BLANCO/CREMA para el texto secundario */
+    color: #29230d; 
+}
+
+/* Botón (SHOP NOW) - (Sin cambios necesarios) */
+.halloween-banner-button {
+    text-decoration: none;
+    background-color: #fff; 
+    color: #cd8039; 
+    border: 1px solid #fff; 
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.halloween-banner-button:hover {
+    background-color: #e09950; 
+    color: #fff;
+}
+
+/* Columna Derecha: Imagen - (Sin cambios) */
+.halloween-banner-image-wrapper {
+    flex: 1;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+.halloween-banner-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media Query (Sin cambios) */
+@media (max-width: 768px) {
+    .halloween-banner-container {
+        flex-direction: column;
+    }
+    .halloween-banner-content {
+        min-height: 300px;
+    }
+    .halloween-banner-heading {
+        font-size: 4em;
+    }
+}
+
+
+/*ACCESORIOS*/
+/*PRIMERA FILA*/
+/* ======================================================= */
+/* NUEVA SECCIÓN: ORANGE GRID (4 PRODUCTOS) */
+/* ======================================================= */
+.orange-grid-section-container {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #f7a95e; /* Fondo naranja cálido */
+    text-align: center;
+}
+
+.orange-grid-section-title {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2.5em;
+    color: #fff; /* Título en color blanco */
+    margin-bottom: 30px;
+}
+
+.orange-grid-products-wrapper {
+    display: grid;
+    /* Fuerza 4 columnas, permitiendo desplazamiento horizontal si no caben */
+    grid-template-columns: repeat(4, 280px); 
+    gap: 20px;
+    overflow-x: auto; 
+    padding-bottom: 15px; 
+    justify-content: start;
+    margin: 0 auto; /* Centra el contenedor del grid */
+}
+
+/* Contenedor de cada producto */
+.orange-grid-product-card {
+    border-radius: 8px; 
+    overflow: hidden; 
+    text-align: left;
+    margin-bottom: 20px;
+    
+    /* El contenedor de la imagen no es solo la imagen, es un wrapper blanco */
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+}
+
+/* Estilos de la Imagen (zona blanca arriba) */
+.orange-grid-product-card img {
+    max-width: 100%;
+    height: 300px; /* Altura fija para las imágenes */
+    object-fit: contain; /* Asegura que la imagen completa se vea */
+    display: block;
+     /* Fondo blanco/gris muy claro detrás de la imagen */
+    padding: 10px; /* Espacio alrededor de la imagen */
+}
+
+/* Contenedor de texto y precio (zona naranja abajo) */
+.orange-grid-details {
+    padding: 15px 20px;
+    background-color: #f7a95e; /* Fondo naranja en esta sección */
+    position: relative;
+    padding-bottom: 40px; 
+    min-height: 120px; /* Altura mínima para asegurar el espacio de texto */
+}
+
+/* Título (Niñas) */
+.orange-grid-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0e0e0e; /* Título en blanco */
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #070707; /* Línea separadora blanca */
+    display: inline-block;
+}
+
+/* Descripción */
+.orange-grid-description {
+    font-size: 0.85em;
+    color: #060606; /* Descripción en blanco */
+    margin: 10px 0;
+    line-height: 1.3;
+}
+
+/* Precio */
+.orange-grid-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0f0f0f; /* Precio en blanco */
+    position: absolute;
+    bottom: 15px; 
+    right: 20px;
+}
+
+/* Media Queries para responsividad (solo ajustes para móviles) */
+@media (max-width: 768px) {
+    .orange-grid-products-wrapper {
+        grid-template-columns: repeat(4, 250px);
+    }
+}
+
+/*ACCESORIOS*/
+/*SEGUNDA FILA*/
+/* ======================================================= */
+/* NUEVA SECCIÓN: BROWN PROMO */
+/* ======================================================= */
+.brown-promo-section-container {
+    background-color: #cd8a5a; /* Color café anaranjado */
+    padding: 60px 20px;
+    margin: 60px auto 0 auto;
+    text-align: center;
+}
+
+.brown-promo-item {
+    display: flex; /* Flexbox para colocar los elementos uno al lado del otro */
+    justify-content: center;
+    align-items: stretch; /* CLAVE: Hace que la imagen y el texto se estiren a la misma altura */
+    max-width: 1000px;
+    min-height: 450px; /* Altura mínima para asegurar el tamaño de los bloques */
+    margin: 0 auto 40px auto;
+    gap: 40px; /* Espacio entre la imagen y el texto */
+}
+
+/* Columna de la Imagen */
+.brown-promo-image-wrapper {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+     
+    padding: 10px;
+    /* QUITAMOS LA SOMBRA para que se vea más incrustado */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra la imagen dentro de su contenedor blanco */
+}
+
+.brown-promo-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Columna del Texto */
+.brown-promo-info-wrapper {
+    flex: 1; /* Ocupa la otra mitad del espacio */
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px 30px;
+    /* QUITAMOS LA SOMBRA para que se vea más incrustado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto verticalmente dentro de la columna */
+    align-items: center;
+    text-align: center;
+}
+
+.brown-promo-title {
+    font-size: 2.5em;
+    color: #4b3e3e; /* Color de texto café oscuro */
+    margin: 0 0 10px 0;
+}
+
+.brown-promo-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    max-width: 80%; /* Para que el texto no se extienda demasiado */
+}
+
+/* Media Queries para la responsividad */
+@media (max-width: 768px) {
+    .brown-promo-item {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        min-height: auto; /* Desactiva la altura mínima en móvil */
+        gap: 20px;
+    }
+
+    /* En móviles, la imagen va primero, sin importar la clase */
+    .brown-promo-item--image-right {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 480px) {
+    .brown-promo-title {
+        font-size: 2em;
+    }
+}
+
+/*ACCESORIOS*/
+/*TOP DEL MES 1*/
+/* ======================================================= */
+/* NUEVA SECCIÓN: HALLOWEEN TOP DE TRES COLUMNAS */
+/* ======================================================= */
+.halloween-top-section-container {
+    max-width: 1200px; 
+    margin: 60px auto; 
+    padding: 20px;
+    background-color: #f7a95e; /* Fondo naranja cálido */
+    text-align: center; 
+}
+
+.halloween-top-section-title {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2.5em;
+    color: #fff; /* Título en blanco */
+    margin-bottom: 30px;
+}
+
+.halloween-top-products-wrapper {
+    display: flex; /* Usamos flexbox para alinear las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: flex-start; 
+    gap: 30px; /* Espacio entre las imágenes */
+    flex-wrap: wrap; 
+}
+
+.halloween-top-product-item {
+    
+    border-radius: 8px; 
+    overflow: hidden; 
+    padding: 15px; /* Espacio interno dentro del recuadro blanco */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    /* Las imágenes en la referencia son más grandes */
+    width: 300px; 
+    height: 300px; 
+   
+}
+
+.halloween-top-product-item img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+    display: block; 
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 992px) {
+    .halloween-top-product-item {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .halloween-top-products-wrapper {
+        gap: 20px;
+    }
+    .halloween-top-product-item {
+        width: 90%; /* Ocupa casi todo el ancho disponible */
+        height: 280px;
+    }
+}
+
+/*ACCESORIOS*/
+/*TOP DEL MES 2*/
+/* ======================================================= */
+/* NUEVA SECCIÓN: SOLO TEXTO EN FONDO BLANCO (white-text-) */
+/* ======================================================= */
+.white-text-section-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco */
+    text-align: center;
+}
+
+.white-text-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Contenedor de cada columna de texto */
+.white-text-item {
+    background-color: #fff; /* Fondo blanco (sin sombra ni bordes) */
+    text-align: left;
+    width: 300px; /* Ancho fijo para cada columna */
+    margin-bottom: 20px;
+    padding: 10px 0; /* Padding sutil para el espacio interno */
+    position: relative;
+}
+
+/* Título */
+.white-text-title {
+    font-size: 1.8em; /* Un poco más grande para el título principal */
+    font-weight: bold;
+    color: #000; /* Negro fuerte */
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000; /* Línea separadora negra/oscura */
+    display: inline-block;
+}
+
+/* Descripción */
+.white-text-description {
+    font-size: 0.85em;
+    color: #555;
+    margin: 10px 0 0 0;
+    line-height: 1.3;
+}
+
+/* Precio */
+.white-text-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    bottom: 0; /* Posicionamiento al final de la tarjeta */
+    right: 0;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .white-text-item {
+        width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .white-text-wrapper {
+        gap: 20px;
+    }
+    .white-text-item {
+        width: 90%; 
+        max-width: 350px;
+    }
+}
+
+
+/*NINOS*/
+/*SECCION AZUL*/
+/* ======================================================= */
+/* NUEVA SECCIÓN: BLUE COMBO (4 BLOQUES ALTERNADOS) */
+/* ======================================================= */
+.blue-combo-section-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #e0f2f7; /* Color azul muy claro (celeste pastel) */
+    text-align: center;
+}
+
+.blue-combo-section-title {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2.5em;
+    color: #4b3e3e; 
+    margin-bottom: 30px;
+}
+
+.blue-combo-products-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Estira todos los elementos a la misma altura */
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+/* Estilo base para cada bloque (imagen o texto) */
+.blue-combo-item {
+    flex: 1; 
+    min-width: 250px; /* Ancho mínimo para cada columna */
+    background-color: #fff; /* Fondo blanco para el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    min-height: 400px; /* Altura mínima para asegurar uniformidad */
+}
+
+/* Estilo específico para las imágenes */
+.blue-combo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Estilo específico para el bloque de texto */
+.blue-combo-text-block {
+    padding: 20px;
+    text-align: left; /* Alinea el texto a la izquierda, como en la imagen */
+    /* Asegura que el contenido de texto se mantenga centrado en la columna */
+    justify-content: flex-start; 
+}
+
+.blue-combo-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+.blue-combo-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+}
+
+/* Media Queries para responsividad (apilar en móvil) */
+@media (max-width: 992px) {
+    .blue-combo-products-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .blue-combo-products-wrapper {
+        grid-template-columns: 1fr; /* 1 columna en móvil */
+    }
+    .blue-combo-item {
+        min-height: auto;
+    }
+}
+
+
+/*HOME*/
+/*GALERIA DE PRODUCTOS*/
+/* ======================================================= */
+/* NUEVA SECCIÓN: BEST DESIGNS (4 COLUMNAS) */
+/* ======================================================= */
+.best-designs-section-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff; /* Fondo blanco puro */
+    text-align: center;
+}
+
+.best-designs-section-title {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 2.5em;
+    color: #f7a95e; /* Color naranja cálido para el título */
+    margin-bottom: 30px;
+}
+
+.best-designs-products-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre las imágenes */
+    flex-wrap: wrap; 
+}
+
+/* Contenedor de cada imagen */
+.best-designs-product-item {
+    
+    border-radius: 8px; 
+    overflow: hidden; 
+    padding: 15px; /* Espacio interno alrededor de la imagen */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    /* Ancho/alto para cada producto */
+    width: 250px; 
+    height: 250px; 
+    
+}
+
+.best-designs-product-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Asegura que la imagen completa se vea */
+    display: block;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 1100px) {
+    .best-designs-products-wrapper {
+        gap: 15px;
+    }
+    .best-designs-product-item {
+        width: 200px; 
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .best-designs-products-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil/tablet */
+        justify-items: center;
+    }
+    .best-designs-product-item {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+    }
+}
+
+
+/*CATALOGO*/
+/*SECCION PONTE EN CONTACTO*/
+/* Variables para colores */
+:root {
+    --kb-color-background: #f7e0c8; 
+    --kb-color-accent: #f78d3b;     
+    --kb-color-text-dark: #333333;
+}
+
+/* **AJUSTE CLAVE:** Aísla el box-sizing y la fuente SOLAMENTE dentro de la sección. */
+.kb-section, .kb-section *, .kb-section *::before, .kb-section *::after {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal de la sección */
+.kb-section {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* --- Estilos del Lado Izquierdo (Información y Contacto) --- */
+
+.kb-info-container {
+    flex: 1;
+    background-color: var(--kb-color-background);
+    padding: 60px 50px;
+    color: var(--kb-color-text-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kb-info-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.kb-info-container p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.kb-info-content {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    padding-bottom: 30px;
+}
+
+.kb-info-item {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 30px;
+}
+
+/* Círculo de Icono de Contacto (Contenedor) */
+.kb-icon {
+    width: 50px;
+    height: 50px;
+    /* AJUSTES IMPORTANTES para evitar que se adapte al contenido */
+    min-width: 50px; 
+    min-height: 50px; 
+    flex-shrink: 0; /* EVITA que este elemento se encoja */
+    /* Fin de Ajustes Importantes */
+    
+    background-color: var(--kb-color-accent);
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+/* Estilo para las IMÁGENES DENTRO de los círculos de contacto (.kb-icon) */
+.kb-icon img {
+    width: 65%; 
+    height: 65%; 
+    object-fit: contain; 
+    display: block;
+    margin: 0;
+    vertical-align: middle; 
+}
+
+.kb-info-item strong {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.kb-info-item p {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* --- Estilos de Redes Sociales --- */
+
+.kb-social-media {
+    padding-top: 30px;
+}
+
+.kb-social-media h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.kb-social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Círculo contenedor de la imagen de Red Social (.kb-social-link) */
+.kb-social-link {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 50px; 
+    height: 50px; 
+    background-color: var(--kb-color-accent);
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+    text-decoration: none; 
+    overflow: hidden; 
+}
+
+/* Estilos para las IMÁGENES DENTRO de los enlaces de redes sociales (.kb-social-link img) */
+.kb-social-link img {
+    width: 70%; 
+    height: 70%; 
+    object-fit: contain; 
+    display: block; 
+    margin: 0;
+    vertical-align: middle; 
+}
+
+.kb-social-link:hover {
+    transform: translateY(-3px);
+}
+
+
+/* --- Estilos del Lado Derecho (Formulario) --- */
+
+.kb-form-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 60px 50px;
+    border-radius: 20px; 
+    box-shadow: 0 0 0 10px #fff; 
+}
+
+.kb-form-container h2 {
+    font-size: 2.5em;
+    color: var(--kb-color-accent);
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.kb-form-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.kb-form-group input,
+.kb-form-group textarea {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+    background: transparent;
+}
+
+.kb-form-group input:focus,
+.kb-form-group textarea:focus {
+    border-bottom-color: var(--kb-color-accent);
+}
+
+.kb-form-group label {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 1em;
+    color: #999;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+/* Efecto flotante para el label */
+.kb-form-group input:focus + label,
+.kb-form-group input:valid + label,
+.kb-form-group textarea:focus + label,
+.kb-form-group textarea:valid + label {
+    top: -15px;
+    font-size: 0.8em;
+    color: var(--kb-color-accent);
+}
+
+.kb-form-group.kb-textarea-group {
+    margin-bottom: 30px;
+}
+
+.kb-form-group textarea {
+    resize: none;
+    height: 80px;
+}
+
+.kb-privacy-text {
+    font-size: 0.75em;
+    color: #888;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.kb-submit-button {
+    width: 180px;
+    padding: 12px;
+    background-color: var(--kb-color-accent);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.kb-submit-button:hover {
+    background-color: #e07b2f;
+}
